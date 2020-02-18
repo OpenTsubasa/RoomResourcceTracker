@@ -18,7 +18,7 @@ class CreateResourcesTable extends Migration
             $table->bigInteger('room_id');
             $table->bigInteger('resourcetype_id');
             $table->bigInteger('count');
-            $table->softDeletes();
+            // $table->softDeletes();
             $table->timestamps();
         });
     }

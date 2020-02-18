@@ -18,7 +18,7 @@ class CreateRoomsTable extends Migration
             $table->string('name');
             $table->bigInteger('roomtype_id');
             $table->bigInteger('department_id');
-            $table->softDeletes();
+            // $table->softDeletes();
             $table->timestamps();
         });
     }

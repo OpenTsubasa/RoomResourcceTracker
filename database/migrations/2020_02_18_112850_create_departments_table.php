@@ -18,7 +18,7 @@ class CreateDepartmentsTable extends Migration
             $table->string('name');
             $table->bigInteger('faculty_id');
             $table->bigInteger('building_id');
-            $table->softDeletes();
+            // $table->softDeletes();
             $table->timestamps();
         });
     }

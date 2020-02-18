@@ -16,7 +16,7 @@ class CreateFacultysTable extends Migration
         Schema::create('facultys', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->softDeletes();
+            // $table->softDeletes();
             $table->timestamps();
         });
     }

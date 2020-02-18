@@ -173,84 +173,118 @@ return [
     */
 
     'menu' => [
+        'MAIN NAVIGATION',
         [
-            'text' => 'search',
-            'search' => true,
-            'topnav' => true,
-        ],
-        [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
-        ],
-        [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
-        ['header' => 'account_settings'],
-        [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
+            'text'    => 'Buildings',
             'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'All',
+                    'url'  => 'buildings',
+                    'icon_color' => 'green',
                 ],
                 [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Create',
+                    'url'  => 'buildings/create',
+                    'can'  => 'edit_or_update',
+                    'icon_color' => 'green',
                 ],
             ],
         ],
-        ['header' => 'labels'],
         [
-            'text'       => 'important',
-            'icon_color' => 'red',
+            'text'    => 'Faculties',
+            'submenu' => [
+                [
+                    'text' => 'All',
+                    'url'  => 'faculty',
+                    'icon_color' => 'green',
+                ],
+                [
+                    'text' => 'Create',
+                    'url'  => 'faculty/create',
+                    'can'  => 'edit_or_update',
+                    'icon_color' => 'green',
+                ],
+            ],
         ],
         [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
+            'text'    => 'Departments',
+            'submenu' => [
+                [
+                    'text' => 'All',
+                    'url'  => 'departments',
+                    'icon_color' => 'green',
+                ],
+                [
+                    'text' => 'Create',
+                    'url'  => 'departments/create',
+                    'can'  => 'edit_or_update',
+                    'icon_color' => 'green',
+                ],
+            ],
         ],
         [
-            'text'       => 'information',
-            'icon_color' => 'aqua',
+            'text'    => 'Resources',
+            'submenu' => [
+                [
+                    'text' => 'All',
+                    'url'  => 'resources',
+                    'icon_color' => 'green',
+                ],
+                [
+                    'text' => 'Create',
+                    'url'  => 'resources/create',
+                    'can'  => 'edit_or_update',
+                    'icon_color' => 'green',
+                ],
+            ],
+        ],
+        [
+            'text'    => 'Resource Types',
+            'submenu' => [
+                [
+                    'text' => 'All',
+                    'url'  => 'resourcetypes',
+                    'icon_color' => 'green',
+                ],
+                [
+                    'text' => 'Create',
+                    'url'  => 'resourcetypes/create',
+                    'can'  => 'edit_or_update',
+                    'icon_color' => 'green',
+                ],
+            ],
+        ],
+        [
+            'text'    => 'Rooms',
+            'submenu' => [
+                [
+                    'text' => 'All',
+                    'url'  => 'rooms',
+                    'icon_color' => 'green',
+                ],
+                [
+                    'text' => 'Create',
+                    'url'  => 'rooms/create',
+                    'can'  => 'edit_or_update',
+                    'icon_color' => 'green',
+                ],
+            ],
+        ],
+        [
+            'text'    => 'Room Types',
+            'submenu' => [
+                [
+                    'text' => 'All',
+                    'url'  => 'roomtypes',
+                    'icon_color' => 'green',
+                ],
+                [
+                    'text' => 'Create',
+                    'url'  => 'roomtypes/create',
+                    'can'  => 'edit_or_update',
+                    'icon_color' => 'green',
+                ],
+            ],
         ],
     ],
 

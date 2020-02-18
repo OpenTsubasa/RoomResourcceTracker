@@ -17,7 +17,7 @@
                     <a class="nav-link" href="{{ url('/') }}">Base</span></a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="{{ url('/about') }}">About</a>
+                    <a class="nav-link" href="#">About</a>
                 </li>
                 @auth
                 <li class="nav-item dropdown">
@@ -25,7 +25,7 @@
                     User
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ url('/profile') }}">Profile</a>
+                        <a class="dropdown-item" href="#">Profile</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="{{ url('/logout') }}">
                         <a class="nav-link" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
