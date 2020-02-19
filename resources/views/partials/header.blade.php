@@ -6,7 +6,7 @@
     <title>RRT - @yield('title')</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/adminlte/dist/css/adminlte.min.css" rel="stylesheet">
+    <link href="{{ url('vendor/adminlte/dist/css/adminlte.min.css') }}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="{{ url('css/simple-sidebar.css') }}" rel="stylesheet">

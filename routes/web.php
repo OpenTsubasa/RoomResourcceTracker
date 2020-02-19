@@ -20,3 +20,10 @@ Auth::routes();
 Route::get('/home', function() {
     return view('home');
 })->name('home')->middleware('auth');
+
+Route::prefix('enter_your_roll_here')->group(function () {
+    Route::get('/test', function () {
+        return view('test');
+    });
+});
+
