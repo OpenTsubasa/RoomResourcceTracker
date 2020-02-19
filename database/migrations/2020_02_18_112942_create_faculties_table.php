@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFacultysTable extends Migration
+class CreateFacultiesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateFacultysTable extends Migration
      */
     public function up()
     {
-        Schema::create('facultys', function (Blueprint $table) {
+        Schema::create('faculties', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
             // $table->softDeletes();
@@ -28,6 +28,6 @@ class CreateFacultysTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('facultys');
+        Schema::dropIfExists('faculties');
     }
 }

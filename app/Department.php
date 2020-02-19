@@ -27,7 +27,7 @@ class Department extends Model
     /**
      * Get the rooms within the department.
      */
-    public function departments()
+    public function rooms()
     {
         return $this->hasMany('App\Room');
     }

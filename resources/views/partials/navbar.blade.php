@@ -7,7 +7,7 @@
         
         <ul class="nav navbar-nav mx-auto">
             <li class="nav-item">
-                <a class="nav-link" href="{{ url('/') }}">Room Resource Tracker Application</a>
+                <b><a class="nav-link" href="{{ url('/') }}">Room Resource Tracker Application</a></b>
             </li>
         </ul>
 

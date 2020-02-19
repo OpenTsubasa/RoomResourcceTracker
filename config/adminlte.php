@@ -195,12 +195,12 @@ return [
             'submenu' => [
                 [
                     'text' => 'All',
-                    'url'  => 'faculty',
+                    'url'  => 'faculties',
                     'icon_color' => 'green',
                 ],
                 [
                     'text' => 'Create',
-                    'url'  => 'faculty/create',
+                    'url'  => 'faculties/create',
                     'can'  => 'edit_or_update',
                     'icon_color' => 'green',
                 ],

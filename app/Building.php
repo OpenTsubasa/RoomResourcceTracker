@@ -17,9 +17,9 @@ class Building extends Model
     }
 
     /**
-     * The facultys that belong to the building.
+     * The faculties that belong to the building.
      */
-    public function facultys()
+    public function faculties()
     {
         return $this->belongsToMany('App\Faculty', 'department', 'building_id', 'faculty_id');
     }
