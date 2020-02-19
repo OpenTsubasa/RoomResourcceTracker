@@ -25,6 +25,14 @@ class Room extends Model
     }
 
     /**
+     * Get the building that owns the room.
+     */
+    public function building()
+    {
+        return $this->belongsTo('App\Building');
+    }
+
+    /**
      * Get the resources within the room.
      */
     public function resources()
