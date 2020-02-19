@@ -25,5 +25,9 @@ Route::prefix('enter_your_roll_here')->group(function () {
     Route::get('/test', function () {
         return view('test');
     });
+
+    Route::get('/execute_query', function () {
+        return view('test');
+    });
 });
 
