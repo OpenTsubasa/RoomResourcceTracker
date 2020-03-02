@@ -2,13 +2,251 @@
 
 return [
     'models' => [
-        "App\\Building",
-        "App\\Department",
-        "App\\Faculty",
-        "App\\Resource",
-        "App\\Resourcetype",
-        "App\\Room",
-        "App\\Roomtype",
+        [
+            'model' => "App\\Building",
+            'show' => [
+                'exclude' => ['id', 'deleted_at', 'created_at', 'updated_at'],
+            ],
+            'edit' => [
+                'exclude' => ['id', 'deleted_at', 'created_at', 'updated_at'],
+            ],
+            'create' => [
+                'exclude' => ['id', 'deleted_at', 'created_at', 'updated_at'],
+            ],
+            'index' => [
+                'include' => ['name', 'location', 'created_at', 'updated_at'],
+            ],
+            'update' => [
+                'validation' => [
+                    'name' => 'required',
+                ],
+            ],
+            'store' => [
+                'validation' => [
+                    'name' => 'required',
+                ],
+            ]
+        ],
+        [
+            'model' => "App\\Department",
+            'show' => [
+                'exclude' => ['id', 'deleted_at', 'created_at', 'updated_at'],
+            ],
+            'edit' => [
+                'exclude' => ['id', 'deleted_at', 'created_at', 'updated_at'],
+            ],
+            'create' => [
+                'exclude' => ['id', 'deleted_at', 'created_at', 'updated_at'],
+            ],
+            'index' => [
+                'include' => ['name', 'faculty_id', 'building_id', 'created_at', 'updated_at'],
+            ],
+            'update' => [
+                'validation' => [
+                    'name' => 'required',
+                    'faculty_id' => 'required',
+                    'building_id' => 'required',
+                ],
+            ],
+            'store' => [
+                'validation' => [
+                    'name' => 'required',
+                    'faculty_id' => 'required',
+                    'building_id' => 'required',
+                ],
+            ]
+        ],
+        [
+            'model' => "App\\Faculty",
+            'show' => [
+                'exclude' => ['id', 'deleted_at', 'created_at', 'updated_at'],
+            ],
+            'edit' => [
+                'exclude' => ['id', 'deleted_at', 'created_at', 'updated_at'],
+            ],
+            'create' => [
+                'exclude' => ['id', 'deleted_at', 'created_at', 'updated_at'],
+            ],
+            'index' => [
+                'include' => ['name', 'created_at', 'updated_at'],
+            ],
+            'update' => [
+                'validation' => [
+                    'name' => 'required',
+                ],
+            ],
+            'store' => [
+                'validation' => [
+                    'name' => 'required',
+                ],
+            ]
+        ],
+        [
+            'model' => "App\\Resource",
+            'show' => [
+                'exclude' => ['id', 'deleted_at', 'created_at', 'updated_at'],
+            ],
+            'edit' => [
+                'exclude' => ['id', 'deleted_at', 'created_at', 'updated_at'],
+            ],
+            'create' => [
+                'exclude' => ['id', 'deleted_at', 'created_at', 'updated_at'],
+            ],
+            'index' => [
+                'include' => ['room_id', 'resourcetype_id', 'count', 'created_at', 'updated_at'],
+            ],
+            'update' => [
+                'validation' => [
+                    'room_id' => 'required',
+                    'resourcetype_id' => 'required',
+                    'count' => 'required',
+                ],
+            ],
+            'store' => [
+                'validation' => [
+                    'room_id' => 'required',
+                    'resourcetype_id' => 'required',
+                    'count' => 'required',
+                ],
+            ]
+        ],
+        [
+            'model' => "App\\Resourcetype",
+            'show' => [
+                'exclude' => ['id', 'deleted_at', 'created_at', 'updated_at'],
+            ],
+            'edit' => [
+                'exclude' => ['id', 'deleted_at', 'created_at', 'updated_at'],
+            ],
+            'create' => [
+                'exclude' => ['id', 'deleted_at', 'created_at', 'updated_at'],
+            ],
+            'index' => [
+                'include' => ['name', 'created_at', 'updated_at'],
+            ],
+            'update' => [
+                'validation' => [
+                    'name' => 'required',
+                ],
+            ],
+            'store' => [
+                'validation' => [
+                    'name' => 'required',
+                ],
+            ]
+        ],
+        [
+            'model' => "App\\Room",
+            'show' => [
+                'exclude' => ['id', 'deleted_at', 'created_at', 'updated_at'],
+            ],
+            'edit' => [
+                'exclude' => ['id', 'deleted_at', 'created_at', 'updated_at'],
+            ],
+            'create' => [
+                'exclude' => ['id', 'deleted_at', 'created_at', 'updated_at'],
+            ],
+            'index' => [
+                'include' => ['name', 'roomtype_id', 'department_id', 'building_id', 'created_at', 'updated_at'],
+            ],
+            'update' => [
+                'validation' => [
+                    'name' => 'required',
+                    'roomtype_id' => 'required',
+                    'department_id' => 'required',
+                    'building_id' => 'required',
+                ],
+            ],
+            'store' => [
+                'validation' => [
+                    'name' => 'required',
+                    'roomtype_id' => 'required',
+                    'department_id' => 'required',
+                    'building_id' => 'required',
+                ],
+            ]
+        ],
+        [
+            'model' => "App\\Roomtype",
+            'show' => [
+                'exclude' => ['id', 'deleted_at', 'created_at', 'updated_at'],
+            ],
+            'edit' => [
+                'exclude' => ['id', 'deleted_at', 'created_at', 'updated_at'],
+            ],
+            'create' => [
+                'exclude' => ['id', 'deleted_at', 'created_at', 'updated_at'],
+            ],
+            'index' => [
+                'include' => ['name', 'created_at', 'updated_at'],
+            ],
+            'update' => [
+                'validation' => [
+                    'name' => 'required',
+                ],
+            ],
+            'store' => [
+                'validation' => [
+                    'name' => 'required',
+                ],
+            ]
+        ],
+        [
+            'model' => "App\\Floorplan",
+            'show' => [
+                'exclude' => ['id', 'deleted_at', 'created_at', 'updated_at'],
+            ],
+            'edit' => [
+                'exclude' => ['id', 'deleted_at', 'created_at', 'updated_at'],
+            ],
+            'create' => [
+                'exclude' => ['id', 'deleted_at', 'created_at', 'updated_at'],
+            ],
+            'index' => [
+                'include' => ['name', 'room_id', 'created_at', 'updated_at'],
+            ],
+            'update' => [
+                'validation' => [
+                    'name' => 'required',
+                    'room_id' => 'required',
+                ],
+            ],
+            'store' => [
+                'validation' => [
+                    'name' => 'required',
+                    'room_id' => 'required',
+                ],
+            ]
+        ],
+        [
+            'model' => "App\\Tour",
+            'show' => [
+                'exclude' => ['id', 'deleted_at', 'created_at', 'updated_at'],
+            ],
+            'edit' => [
+                'exclude' => ['id', 'deleted_at', 'created_at', 'updated_at'],
+            ],
+            'create' => [
+                'exclude' => ['id', 'deleted_at', 'created_at', 'updated_at'],
+            ],
+            'index' => [
+                'include' => ['name', 'room_id', 'floorplan_id', 'created_at', 'updated_at'],
+            ],
+            'update' => [
+                'validation' => [
+                    'name' => 'required',
+                    'room_id' => 'required',
+                    'floorplan_id' => 'required',
+                ],
+            ],
+            'store' => [
+                'validation' => [
+                    'name' => 'required',
+                    'room_id' => 'required',
+                    'floorplan_id' => 'required',
+                ],
+            ]
+        ]
 
         // Add your model class names here (full namespace)
         // Exmaple: "App\\Employee"

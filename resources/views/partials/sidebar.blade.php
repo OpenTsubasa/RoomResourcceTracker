@@ -9,6 +9,8 @@
             <a href="#" class="list-group-item list-group-item-action bg-light">Rooms</a>
             <a href="#" class="list-group-item list-group-item-action bg-light">Resource Types</a>
             <a href="#" class="list-group-item list-group-item-action bg-light">Resources</a>
+            <a href="#" class="list-group-item list-group-item-action bg-light">Floor Plans</a>
+            <a href="#" class="list-group-item list-group-item-action bg-light">Tours</a>
         </div>
     </div>
     <!-- /#sidebar-wrapper -->

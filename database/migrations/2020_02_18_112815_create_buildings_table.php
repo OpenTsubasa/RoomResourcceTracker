@@ -17,7 +17,7 @@ class CreateBuildingsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('location');
-            // $table->softDeletes();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

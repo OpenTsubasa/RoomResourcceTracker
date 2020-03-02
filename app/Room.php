@@ -47,4 +47,20 @@ class Room extends Model
     {
         return $this->belongsToMany('App\Resourcetype', 'Resource', 'room_id', 'resourcetype_id');
     }
+
+    /**
+     * Get the floorplan associated with the room.
+     */
+    public function floorplan()
+    {
+        return $this->hasOne('App\Floorplan');
+    }
+
+    /**
+     * Get the tours within the room.
+     */
+    public function tours()
+    {
+        return $this->hasMany('App\Tours');
+    }
 }

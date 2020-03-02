@@ -16,7 +16,7 @@ class CreateResourcetypesTable extends Migration
         Schema::create('resourcetypes', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            // $table->softDeletes();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

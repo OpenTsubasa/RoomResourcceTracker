@@ -185,7 +185,6 @@ return [
                 [
                     'text' => 'Create',
                     'url'  => 'buildings/create',
-                    'can'  => 'edit_or_update',
                     'icon_color' => 'green',
                 ],
             ],
@@ -201,7 +200,6 @@ return [
                 [
                     'text' => 'Create',
                     'url'  => 'faculties/create',
-                    'can'  => 'edit_or_update',
                     'icon_color' => 'green',
                 ],
             ],
@@ -217,7 +215,6 @@ return [
                 [
                     'text' => 'Create',
                     'url'  => 'departments/create',
-                    'can'  => 'edit_or_update',
                     'icon_color' => 'green',
                 ],
             ],
@@ -233,7 +230,6 @@ return [
                 [
                     'text' => 'Create',
                     'url'  => 'resources/create',
-                    'can'  => 'edit_or_update',
                     'icon_color' => 'green',
                 ],
             ],
@@ -249,7 +245,6 @@ return [
                 [
                     'text' => 'Create',
                     'url'  => 'resourcetypes/create',
-                    'can'  => 'edit_or_update',
                     'icon_color' => 'green',
                 ],
             ],
@@ -265,7 +260,6 @@ return [
                 [
                     'text' => 'Create',
                     'url'  => 'rooms/create',
-                    'can'  => 'edit_or_update',
                     'icon_color' => 'green',
                 ],
             ],
@@ -281,7 +275,36 @@ return [
                 [
                     'text' => 'Create',
                     'url'  => 'roomtypes/create',
-                    'can'  => 'edit_or_update',
+                    'icon_color' => 'green',
+                ],
+            ],
+        ],
+        [
+            'text'    => 'Floor Plans',
+            'submenu' => [
+                [
+                    'text' => 'All',
+                    'url'  => 'floorplans',
+                    'icon_color' => 'green',
+                ],
+                [
+                    'text' => 'Create',
+                    'url'  => 'floorplans/create',
+                    'icon_color' => 'green',
+                ],
+            ],
+        ],
+        [
+            'text'    => 'Tours',
+            'submenu' => [
+                [
+                    'text' => 'All',
+                    'url'  => 'tours',
+                    'icon_color' => 'green',
+                ],
+                [
+                    'text' => 'Create',
+                    'url'  => 'tours/create',
                     'icon_color' => 'green',
                 ],
             ],

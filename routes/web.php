@@ -15,18 +15,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('/home', function() {
     return view('home');
-})->name('home')->middleware('auth');
+    
+    /*if (Auth::user()->can('edit_or_update')) {
+        
+    } else {
+        
+    }*/
+})->name('home')->middleware(['auth', 'is_admin']);
 
-Route::prefix('enter_your_roll_here')->group(function () {
+Route::prefix('public')->group(function () {
     Route::get('/test', function () {
-        return view('test');
-    });
-
-    Route::get('/execute_query', function () {
         return view('test');
     });
 });

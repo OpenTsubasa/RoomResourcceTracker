@@ -12,3 +12,8 @@ php artisan make:model Roomtype
 php artisan make:model Room
 php artisan make:model Resourcetype
 php artisan make:model Resource
+php artisan make:migration create_floorplans_table
+php artisan make:migration create_tours_table
+php artisan make:model Floorplan
+php artisan make:model Tour
+
