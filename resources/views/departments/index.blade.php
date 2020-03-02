@@ -16,8 +16,8 @@
 <table class="table table-bordered">
     <tr>
         <th>Name</th>
-        <th>Faculty Id</th>
-        <th>Building Id</th>
+        <th>Faculty</th>
+        <th>Building</th>
         <th>Created At</th>
         <th>Updated At</th>
         <th width="280px">Action</th>
@@ -28,10 +28,10 @@
                 {{$department->name}}
             </td>
             <td>
-                {{$department->faculty_id}}
+                {{$department->faculty->name}}
             </td>
             <td>
-                {{$department->building_id}}
+                {{$department->building->name}}
             </td>
             <td>
                 {{$department->created_at}}
@@ -51,4 +51,7 @@
         </tr>
     @endforeach
 </table>
+<div>
+    {{ $departments->links() }}
+</div>
 @endsection

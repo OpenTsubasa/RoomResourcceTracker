@@ -46,14 +46,19 @@
             <div class="form-group">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Faculty Id:</strong>
-                        <input
-                            type="number"
-                            step="1"
-                            name="faculty_id"
-                            value="{$department->faculty_id}"
-                            class="form-control"
-                            placeholder="Faculty Id">
+                        <strong>Faculty:</strong>
+                        <select name="faculty_id" class="form-control">
+                            <option value="">--Select--</option>
+                            @foreach ($faculties as $faculty)
+                            <option value="{{$faculty->id}}"
+                                @if ($faculty->id == $department->faculty_id)
+                                    selected
+                                @endif
+                                >
+                                {{$faculty->name}}
+                            </option>
+                            @endforeach
+                        </select>
                     </div>
                 </div>
             </div>
@@ -62,14 +67,19 @@
             <div class="form-group">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Building Id:</strong>
-                        <input
-                            type="number"
-                            step="1"
-                            name="building_id"
-                            value="{$department->building_id}"
-                            class="form-control"
-                            placeholder="Building Id">
+                        <strong>Building:</strong>
+                        <select name="building_id" class="form-control">
+                            <option value="">--Select--</option>
+                            @foreach ($buildings as $building)
+                            <option value="{{$building->id}}"
+                                @if ($building->id == $department->building_id)
+                                    selected
+                                @endif
+                                >
+                                {{$building->name}}
+                            </option>
+                            @endforeach
+                        </select>
                     </div>
                 </div>
             </div>

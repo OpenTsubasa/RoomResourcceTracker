@@ -21,7 +21,7 @@
                             <li><a href="{{ url('/buildings') }}">Buildings</a></li>
                             <li><a href="{{ url('/faculties') }}">Faculties</a></li>
                             <li><a href="{{ url('/departments') }}">Departments</a></li>
-                            <li><a href="{{ url('/resoures') }}">Resoures</a></li>
+                            <li><a href="{{ url('/resources') }}">Resources</a></li>
                             <li><a href="{{ url('/resourcetypes') }}">Resource Types</a></li>
                             <li><a href="{{ url('/rooms') }}">Rooms</a></li>
                             <li><a href="{{ url('/roomtypes') }}">Room Types</a></li>

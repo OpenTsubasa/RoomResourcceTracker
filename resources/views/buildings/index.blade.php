@@ -47,4 +47,7 @@
         </tr>
     @endforeach
 </table>
+<div>
+    {{ $buildings->links() }}
+</div>
 @endsection

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Department;
+use App\Faculty;
+use App\Building;
 
 class DepartmentController extends Controller
 {
@@ -23,7 +25,9 @@ class DepartmentController extends Controller
 
     public function create()
     {
-        return view('departments.create');
+        $faculties = Faculty::all();
+        $buildings = Building::all();
+        return view('departments.create', compact('faculties', 'buildings'));
     }
 
     public function store(Request $request)
@@ -63,8 +67,10 @@ class DepartmentController extends Controller
 
     public function edit($id)
     {
+        $faculties = Faculty::all();
+        $buildings = Building::all();
         $department = $this->department->findOrFail($id);
-        return view('departments.edit', compact('department'));
+        return view('departments.edit', compact('department', 'faculties', 'buildings'));
     }
 
     public function update(Request $request, $id)

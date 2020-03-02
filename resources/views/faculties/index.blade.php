@@ -43,4 +43,7 @@
         </tr>
     @endforeach
 </table>
+<div>
+    {{ $faculties->links() }}
+</div>
 @endsection
