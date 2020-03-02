@@ -17,15 +17,27 @@ Route::get('/', function () {
 
 Auth::routes(['register' => false]);
 
-Route::get('/home', function() {
-    return view('home');
-    
-    /*if (Auth::user()->can('edit_or_update')) {
+Route::middleware(['auth', 'is_admin'])->group(function () {
+    Route::get('/home', function() {
+        return view('home');
         
-    } else {
-        
-    }*/
-})->name('home')->middleware(['auth', 'is_admin']);
+        /*if (Auth::user()->can('edit_or_update')) {
+            
+        } else {
+            
+        }*/
+    })->name('home');
+
+    Route::resource('buildings', 'BuildingController');
+    Route::resource('departments', 'DepartmentController');
+    Route::resource('faculties', 'FacultyController');
+    Route::resource('resources', 'ResourceController');
+    Route::resource('resourcetypes', 'ResourcetypeController');
+    Route::resource('rooms', 'RoomController');
+    Route::resource('roomtypes', 'RoomtypeController');
+    Route::resource('floorplans', 'FloorplanController');
+    Route::resource('tours', 'TourController');
+});
 
 Route::prefix('public')->group(function () {
     Route::get('/test', function () {

@@ -2,6 +2,7 @@
 
 return [
     'models' => [
+        /*
         [
             'model' => "App\\Building",
             'show' => [
@@ -247,6 +248,7 @@ return [
                 ],
             ]
         ]
+        */
 
         // Add your model class names here (full namespace)
         // Exmaple: "App\\Employee"
