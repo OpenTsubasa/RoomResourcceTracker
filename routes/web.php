@@ -43,5 +43,15 @@ Route::prefix('public')->group(function () {
     Route::get('/test', function () {
         return view('test');
     });
+
+    Route::get('/buildings', 'PublicController@buildings');
+    Route::get('/faculties', 'PublicController@faculties');
+    Route::get('/departments', 'PublicController@departments');
+    Route::get('/roomtypes', 'PublicController@roomtypes');
+    Route::get('/rooms', 'PublicController@rooms');
+    Route::get('/resourcetypes', 'PublicController@resourcetypes');
+    Route::get('/resources', 'PublicController@resources');
+    Route::get('/floorplans', 'PublicController@floorplans');
+    Route::get('/tours', 'PublicController@tours');
 });
 

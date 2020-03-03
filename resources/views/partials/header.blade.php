@@ -7,6 +7,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="{{ url('vendor/adminlte/dist/css/adminlte.min.css') }}" rel="stylesheet">
+    <link href="{{ url('vendor/datatables/css/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="{{ url('css/simple-sidebar.css') }}" rel="stylesheet">
