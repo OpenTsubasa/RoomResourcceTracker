@@ -15,8 +15,9 @@
 @section('content')
 <table class="table table-bordered">
     <tr>
-        <th>Room Id</th>
-        <th>Resourcetype Id</th>
+        <th>Room</th>
+        <th>Building</th>
+        <th>Resourcetype</th>
         <th>Count</th>
         <th>Created At</th>
         <th>Updated At</th>
@@ -25,10 +26,13 @@
     @foreach ($resources as $resource)
         <tr>
             <td>
-                {{$resource->room_id}}
+                {{$resource->room->name}}
             </td>
             <td>
-                {{$resource->resourcetype_id}}
+                {{$resource->room->building->name}}
+            </td>
+            <td>
+                {{$resource->resourcetype->name}}
             </td>
             <td>
                 {{$resource->count}}
@@ -51,4 +55,7 @@
         </tr>
     @endforeach
 </table>
+<div>
+    {{ $resources->links() }}
+</div>
 @endsection

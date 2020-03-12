@@ -31,14 +31,19 @@
             <div class="form-group">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Room Id:</strong>
-                        <input
-                            type="number"
-                            step="1"
-                            name="room_id"
-                            value="{$resource->room_id}"
-                            class="form-control"
-                            placeholder="Room Id">
+                        <strong>Room:</strong>
+                        <select name="room_id" class="form-control">
+                            <option value="">--Select--</option>
+                            @foreach ($rooms as $room)
+                            <option value="{{$room->id}}"
+                                @if ($room->id == $resource->room_id)
+                                    selected
+                                @endif
+                                >
+                                {{$room->name}} - {{$room->building->name}}
+                            </option>
+                            @endforeach
+                        </select>
                     </div>
                 </div>
             </div>
@@ -47,14 +52,19 @@
             <div class="form-group">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Resourcetype Id:</strong>
-                        <input
-                            type="number"
-                            step="1"
-                            name="resourcetype_id"
-                            value="{$resource->resourcetype_id}"
-                            class="form-control"
-                            placeholder="Resourcetype Id">
+                        <strong>Resourcetype:</strong>
+                        <select name="resourcetype_id" class="form-control">
+                            <option value="">--Select--</option>
+                            @foreach ($resourcetypes as $resourcetype)
+                            <option value="{{$resourcetype->id}}"
+                                @if ($resourcetype->id == $resource->resourcetype_id)
+                                    selected
+                                @endif
+                                >
+                                {{$resourcetype->name}}
+                            </option>
+                            @endforeach
+                        </select>
                     </div>
                 </div>
             </div>
@@ -68,7 +78,7 @@
                             type="number"
                             step="1"
                             name="count"
-                            value="{$resource->count}"
+                            value="{{$resource->count}}"
                             class="form-control"
                             placeholder="Count">
                     </div>

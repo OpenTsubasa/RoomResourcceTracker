@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Room;
+use App\RoomType;
+use App\Department;
+use App\Building;
 
 class RoomController extends Controller
 {
@@ -23,7 +26,10 @@ class RoomController extends Controller
 
     public function create()
     {
-        return view('rooms.create');
+        $roomtypes = RoomType::all();
+        $departments = Department::all();
+        $buildings = Building::all();
+        return view('rooms.create', compact('roomtypes', 'departments', 'buildings'));
     }
 
     public function store(Request $request)
@@ -64,8 +70,11 @@ class RoomController extends Controller
 
     public function edit($id)
     {
+        $roomtypes = RoomType::all();
+        $departments = Department::all();
+        $buildings = Building::all();
         $room = $this->room->findOrFail($id);
-        return view('rooms.edit', compact('room'));
+        return view('rooms.edit', compact('room', 'roomtypes', 'departments', 'buildings'));
     }
 
     public function update(Request $request, $id)

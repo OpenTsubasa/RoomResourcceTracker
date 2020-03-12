@@ -16,9 +16,9 @@
 <table class="table table-bordered">
     <tr>
         <th>Name</th>
-        <th>Roomtype Id</th>
-        <th>Department Id</th>
-        <th>Building Id</th>
+        <th>Roomtype</th>
+        <th>Department</th>
+        <th>Building</th>
         <th>Created At</th>
         <th>Updated At</th>
         <th width="280px">Action</th>
@@ -29,13 +29,13 @@
                 {{$room->name}}
             </td>
             <td>
-                {{$room->roomtype_id}}
+                {{$room->roomtype->name}}
             </td>
             <td>
-                {{$room->department_id}}
+                {{$room->department->name}}
             </td>
             <td>
-                {{$room->building_id}}
+                {{$room->building->name}}
             </td>
             <td>
                 {{$room->created_at}}
@@ -55,4 +55,7 @@
         </tr>
     @endforeach
 </table>
+<div>
+    {{ $rooms->links() }}
+</div>
 @endsection

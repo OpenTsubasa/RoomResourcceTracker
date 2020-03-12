@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Resource;
+use App\Room;
+use App\ResourceType;
 
 class ResourceController extends Controller
 {
@@ -23,7 +25,9 @@ class ResourceController extends Controller
 
     public function create()
     {
-        return view('resources.create');
+        $rooms = Room::all();
+        $resourcetypes = ResourceType::all();
+        return view('resources.create', compact('rooms', 'resourcetypes'));
     }
 
     public function store(Request $request)
@@ -63,8 +67,10 @@ class ResourceController extends Controller
 
     public function edit($id)
     {
+        $rooms = Room::all();
+        $resourcetypes = ResourceType::all();
         $resource = $this->resource->findOrFail($id);
-        return view('resources.edit', compact('resource'));
+        return view('resources.edit', compact('resource', 'rooms', 'resourcetypes'));
     }
 
     public function update(Request $request, $id)

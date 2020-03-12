@@ -43,4 +43,7 @@
         </tr>
     @endforeach
 </table>
+<div>
+    {{ $resourcetypes->links() }}
+</div>
 @endsection

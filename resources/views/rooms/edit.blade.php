@@ -46,14 +46,19 @@
             <div class="form-group">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Roomtype Id:</strong>
-                        <input
-                            type="number"
-                            step="1"
-                            name="roomtype_id"
-                            value="{$room->roomtype_id}"
-                            class="form-control"
-                            placeholder="Roomtype Id">
+                        <strong>Room Type:</strong>
+                        <select name="roomtype_id" class="form-control">
+                            <option value="">--Select--</option>
+                            @foreach ($roomtypes as $roomtype)
+                            <option value="{{$roomtype->id}}"
+                                @if ($roomtype->id == $room->roomtype_id)
+                                    selected
+                                @endif
+                                >
+                                {{$roomtype->name}}
+                            </option>
+                            @endforeach
+                        </select>
                     </div>
                 </div>
             </div>
@@ -62,14 +67,19 @@
             <div class="form-group">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Department Id:</strong>
-                        <input
-                            type="number"
-                            step="1"
-                            name="department_id"
-                            value="{$room->department_id}"
-                            class="form-control"
-                            placeholder="Department Id">
+                        <strong>Department:</strong>
+                        <select name="department_id" class="form-control">
+                            <option value="">--Select--</option>
+                            @foreach ($departments as $department)
+                            <option value="{{$department->id}}"
+                                @if ($department->id == $room->department_id)
+                                    selected
+                                @endif
+                                >
+                                {{$department->name}}
+                            </option>
+                            @endforeach
+                        </select>
                     </div>
                 </div>
             </div>
@@ -78,14 +88,19 @@
             <div class="form-group">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Building Id:</strong>
-                        <input
-                            type="number"
-                            step="1"
-                            name="building_id"
-                            value="{$room->building_id}"
-                            class="form-control"
-                            placeholder="Building Id">
+                        <strong>Building:</strong>
+                        <select name="building_id" class="form-control">
+                            <option value="">--Select--</option>
+                            @foreach ($buildings as $building)
+                            <option value="{{$building->id}}"
+                                @if ($building->id == $room->building_id)
+                                    selected
+                                @endif
+                                >
+                                {{$building->name}}
+                            </option>
+                            @endforeach
+                        </select>
                     </div>
                 </div>
             </div>

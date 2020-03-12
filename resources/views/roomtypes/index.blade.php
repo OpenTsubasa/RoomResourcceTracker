@@ -43,4 +43,7 @@
         </tr>
     @endforeach
 </table>
+<div>
+    {{ $roomtypes->links() }}
+</div>
 @endsection
