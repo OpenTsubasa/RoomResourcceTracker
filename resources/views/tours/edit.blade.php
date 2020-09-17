@@ -46,14 +46,19 @@
             <div class="form-group">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Room Id:</strong>
-                        <input
-                            type="number"
-                            step="1"
-                            name="room_id"
-                            value="{$tour->room_id}"
-                            class="form-control"
-                            placeholder="Room Id">
+                        <strong>Room:</strong>
+                        <select name="room_id" class="form-control">
+                            <option value="">--Select--</option>
+                            @foreach ($rooms as $room)
+                            <option value="{{$room->id}}"
+                                @if ($room->id == $tour->room_id)
+                                    selected
+                                @endif
+                                >
+                                {{$room->name}} - {{$room->building->name}}
+                            </option>
+                            @endforeach
+                        </select>
                     </div>
                 </div>
             </div>
@@ -62,14 +67,19 @@
             <div class="form-group">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Floorplan Id:</strong>
-                        <input
-                            type="number"
-                            step="1"
-                            name="floorplan_id"
-                            value="{$tour->floorplan_id}"
-                            class="form-control"
-                            placeholder="Floorplan Id">
+                        <strong>Floorplan:</strong>
+                        <select name="floorplan_id" class="form-control">
+                            <option value="">--Select--</option>
+                            @foreach ($floorplans as $floorplan)
+                            <option value="{{$floorplan->id}}"
+                                @if ($floorplan->id == $tour->floorplan_id)
+                                    selected
+                                @endif
+                                >
+                                {{$floorplan->name}}
+                            </option>
+                            @endforeach
+                        </select>
                     </div>
                 </div>
             </div>

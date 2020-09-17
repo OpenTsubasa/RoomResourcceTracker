@@ -15,6 +15,7 @@
 @section('content')
 <table class="table table-bordered">
     <tr>
+        <th>Id</th>
         <th>Name</th>
         <th>Roomtype</th>
         <th>Department</th>
@@ -25,6 +26,9 @@
     </tr>
     @foreach ($rooms as $room)
         <tr>
+            <td>
+                {{$room->id}}
+            </td>
             <td>
                 {{$room->name}}
             </td>

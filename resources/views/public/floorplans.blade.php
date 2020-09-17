@@ -9,9 +9,11 @@
             <table id="data" class="table table-striped table-bordered" style="width:100%">
                 <thead>
                     <tr>
+                        <th>Id</th>
                         <th>Name</th>
                         <th>Room</th>
                         <th>Department</th>
+                        <th>Building</th>
                         <th>Created At</th>
                         <th>Updated At</th>
                     </tr>
@@ -19,9 +21,11 @@
                 <tbody>
                     @foreach ($floorplans as $floorplan)
                     <tr>
+                        <td>{{$floorplan->id}}</td>
                         <td>{{$floorplan->name}}</td>
                         <td>{{$floorplan->room->name}}</td>
                         <td>{{$floorplan->room->department->name}}</td>
+                        <td>{{$floorplan->room->building->name}}</td>
                         <td>{{$floorplan->created_at}}</td>
                         <td>{{$floorplan->updated_at}}</td>
                     </tr>

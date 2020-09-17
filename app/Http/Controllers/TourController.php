@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Tour;
+use App\Room;
+use App\Floorplan;
 
 class TourController extends Controller
 {
@@ -23,7 +25,9 @@ class TourController extends Controller
 
     public function create()
     {
-        return view('tours.create');
+        $rooms = Room::all();
+        $floorplans = Floorplan::all();
+        return view('tours.create', compact('rooms', 'floorplans'));
     }
 
     public function store(Request $request)
@@ -63,8 +67,10 @@ class TourController extends Controller
 
     public function edit($id)
     {
+        $rooms = Room::all();
+        $floorplans = Floorplan::all();
         $tour = $this->tour->findOrFail($id);
-        return view('tours.edit', compact('tour'));
+        return view('tours.edit', compact('tour', 'rooms', 'floorplans'));
     }
 
     public function update(Request $request, $id)

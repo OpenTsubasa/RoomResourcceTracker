@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Room;
-use App\RoomType;
+use App\Roomtype;
 use App\Department;
 use App\Building;
 

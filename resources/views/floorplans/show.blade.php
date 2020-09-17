@@ -16,14 +16,26 @@
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
+            <strong>Id:</strong>
+            {{$floorplan->id}}
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
             <strong>Name:</strong>
             {{$floorplan->name}}
         </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-            <strong>Room Id:</strong>
-            {{$floorplan->room_id}}
+            <strong>Room:</strong>
+            {{$floorplan->room->name}}
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>Building:</strong>
+            {{$floorplan->room->building->name}}
         </div>
     </div>
 </div>

@@ -9,8 +9,10 @@
             <table id="data" class="table table-striped table-bordered" style="width:100%">
                 <thead>
                     <tr>
+                        <th>Id</th>
                         <th>Room</th>
                         <th>Department</th>
+                        <th>Building</th>
                         <th>Resource Type</th>
                         <th>Count</th>
                         <th>Created At</th>
@@ -20,8 +22,10 @@
                 <tbody>
                     @foreach ($resources as $resource)
                     <tr>
+                        <td>{{$resource->id}}</td>
                         <td>{{$resource->room->name}}</td>
                         <td>{{$resource->room->department->name}}</td>
+                        <td>{{$resource->room->building->name}}</td>
                         <td>{{$resource->resourcetype->name}}</td>
                         <td>{{$resource->count}}</td>
                         <td>{{$resource->created_at}}</td>

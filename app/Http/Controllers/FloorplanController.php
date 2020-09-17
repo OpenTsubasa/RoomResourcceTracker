@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Floorplan;
+use App\Room;
 
 class FloorplanController extends Controller
 {
@@ -23,7 +24,8 @@ class FloorplanController extends Controller
 
     public function create()
     {
-        return view('floorplans.create');
+        $rooms = Room::all();
+        return view('floorplans.create', compact('rooms'));
     }
 
     public function store(Request $request)
@@ -62,8 +64,9 @@ class FloorplanController extends Controller
 
     public function edit($id)
     {
+        $rooms = Room::all();
         $floorplan = $this->floorplan->findOrFail($id);
-        return view('floorplans.edit', compact('floorplan'));
+        return view('floorplans.edit', compact('floorplan', 'rooms'));
     }
 
     public function update(Request $request, $id)

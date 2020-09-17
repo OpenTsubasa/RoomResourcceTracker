@@ -16,20 +16,32 @@
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
+            <strong>Id:</strong>
+            {{$tour->id}}
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
             <strong>Name:</strong>
             {{$tour->name}}
         </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-            <strong>Room Id:</strong>
-            {{$tour->room_id}}
+            <strong>Room:</strong>
+            {{$tour->room->name}}
         </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-            <strong>Floorplan Id:</strong>
-            {{$tour->floorplan_id}}
+            <strong>Room:</strong>
+            {{$tour->room->building->name}}
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>Floorplan:</strong>
+            {{$tour->floorplan->name}}
         </div>
     </div>
 </div>

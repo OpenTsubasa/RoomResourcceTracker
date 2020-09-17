@@ -9,6 +9,7 @@
             <table id="data" class="table table-striped table-bordered" style="width:100%">
                 <thead>
                     <tr>
+                        <th>Id</th>
                         <th>Name</th>
                         <th>Created At</th>
                         <th>Updated At</th>
@@ -17,6 +18,7 @@
                 <tbody>
                     @foreach ($resourcetypes as $resourcetype)
                     <tr>
+                        <td>{{$resourcetype->id}}</td>
                         <td>{{$resourcetype->name}}</td>
                         <td>{{$resourcetype->created_at}}</td>
                         <td>{{$resourcetype->updated_at}}</td>

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Resource;
 use App\Room;
-use App\ResourceType;
+use App\Resourcetype;
 
 class ResourceController extends Controller
 {

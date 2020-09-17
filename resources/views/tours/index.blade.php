@@ -15,9 +15,11 @@
 @section('content')
 <table class="table table-bordered">
     <tr>
+        <th>Id</th>
         <th>Name</th>
-        <th>Room Id</th>
-        <th>Floorplan Id</th>
+        <th>Room</th>
+        <th>Building</th>
+        <th>Floorplan</th>
         <th>Created At</th>
         <th>Updated At</th>
         <th width="280px">Action</th>
@@ -25,13 +27,19 @@
     @foreach ($tours as $tour)
         <tr>
             <td>
+                {{$tour->id}}
+            </td>
+            <td>
                 {{$tour->name}}
             </td>
             <td>
-                {{$tour->room_id}}
+                {{$tour->room->name}}
             </td>
             <td>
-                {{$tour->floorplan_id}}
+                {{$tour->room->building->name}}
+            </td>
+            <td>
+                {{$tour->floorplan->name}}
             </td>
             <td>
                 {{$tour->created_at}}

@@ -16,14 +16,26 @@
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-            <strong>Room Id:</strong>
-            {{$resource->room_id}}
+            <strong>Resource Id:</strong>
+            {{$resource->id}}
         </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-            <strong>Resourcetype Id:</strong>
-            {{$resource->resourcetype_id}}
+            <strong>Room:</strong>
+            {{$resource->room->name}}
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>Building:</strong>
+            {{$resource->room->building->name}}
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>Resourcetype:</strong>
+            {{$resource->resourcetype->name}}
         </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12">

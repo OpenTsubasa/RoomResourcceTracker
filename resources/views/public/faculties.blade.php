@@ -9,6 +9,7 @@
             <table id="data" class="table table-striped table-bordered" style="width:100%">
                 <thead>
                     <tr>
+                        <th>Id</th>
                         <th>Name</th>
                         <th>Created At</th>
                         <th>Updated At</th>
@@ -17,6 +18,7 @@
                 <tbody>
                     @foreach ($faculties as $faculty)
                     <tr>
+                        <td>{{$faculty->id}}</td>
                         <td>{{$faculty->name}}</td>
                         <td>{{$faculty->created_at}}</td>
                         <td>{{$faculty->updated_at}}</td>

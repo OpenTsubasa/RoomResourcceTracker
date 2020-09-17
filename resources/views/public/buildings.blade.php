@@ -9,6 +9,7 @@
             <table id="data" class="table table-striped table-bordered" style="width:100%">
                 <thead>
                     <tr>
+                        <th>Id</th>
                         <th>Name</th>
                         <th>Location</th>
                         <th>Created At</th>
@@ -18,6 +19,7 @@
                 <tbody>
                     @foreach ($buildings as $building)
                     <tr>
+                        <td>{{$building->id}}</td>
                         <td>{{$building->name}}</td>
                         <td>{{$building->location}}</td>
                         <td>{{$building->created_at}}</td>

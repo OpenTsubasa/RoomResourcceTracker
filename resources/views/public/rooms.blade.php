@@ -9,6 +9,7 @@
             <table id="data" class="table table-striped table-bordered" style="width:100%">
                 <thead>
                     <tr>
+                        <th>Id</th>
                         <th>Name</th>
                         <th>Room Type</th>
                         <th>Department</th>
@@ -20,6 +21,7 @@
                 <tbody>
                     @foreach ($rooms as $room)
                     <tr>
+                        <td>{{$room->id}}</td>
                         <td>{{$room->name}}</td>
                         <td>{{$room->roomtype->name}}</td>
                         <td>{{$room->department->name}}</td>
