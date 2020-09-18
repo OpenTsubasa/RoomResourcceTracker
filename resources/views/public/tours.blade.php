@@ -22,10 +22,10 @@
                     @foreach ($tours as $tour)
                     <tr>
                         <td>{{$tour->id}}</td>
-                        <td>{{$tour->name}}</td>
+                        <td><a href="{{$tour->name}}">{{$tour->name}}</a></td>
                         <td>{{$tour->room->name}}</td>
                         <td>{{$tour->room->department->name}}</td>
-                        <td>{{$tour->floorplan->name}}</td>
+                        <td><a href="{{$tour->floorplan->name}}">{{$tour->floorplan->name}}</a></td>
                         <td>{{$tour->created_at}}</td>
                         <td>{{$tour->updated_at}}</td>
                     </tr>
