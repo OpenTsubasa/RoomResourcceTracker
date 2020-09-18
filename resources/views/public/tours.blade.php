@@ -23,9 +23,9 @@
                     <tr>
                         <td>{{$tour->id}}</td>
                         <td>{{$tour->name}}</td>
-                        <td>{{$resource->room->name}}</td>
-                        <td>{{$resource->room->department->name}}</td>
-                        <td>{{$resource->floorplan->name}}</td>
+                        <td>{{$tour->room->name}}</td>
+                        <td>{{$tour->room->department->name}}</td>
+                        <td>{{$tour->floorplan->name}}</td>
                         <td>{{$tour->created_at}}</td>
                         <td>{{$tour->updated_at}}</td>
                     </tr>
