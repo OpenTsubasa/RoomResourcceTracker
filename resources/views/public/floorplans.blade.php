@@ -11,6 +11,7 @@
                     <tr>
                         <th>Id</th>
                         <th>Name</th>
+                        <th>Tour</th>
                         <th>Room</th>
                         <th>Department</th>
                         <th>Building</th>
@@ -23,6 +24,7 @@
                     <tr>
                         <td>{{$floorplan->id}}</td>
                         <td><a target="_blank" href="{{$floorplan->name}}">{{$floorplan->name}}</a></td>
+                        <td><a target="_blank" href="{{$floorplan->tour}}">{{$floorplan->tour}}</a></td>
                         <td>{{$floorplan->room->name}}</td>
                         <td>{{$floorplan->room->department->name}}</td>
                         <td>{{$floorplan->room->building->name}}</td>

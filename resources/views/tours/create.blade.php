@@ -34,6 +34,20 @@
             <div class="form-group">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
+                        <strong>Floor:</strong>
+                        <input
+                            type="text"
+                            name="floor"
+                            class="form-control"
+                            placeholder="Floor">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
                         <strong>Room:</strong>
                         <select name="room_id" class="form-control">
                             <option value="">--Select--</option>

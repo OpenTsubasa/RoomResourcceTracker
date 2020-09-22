@@ -17,6 +17,7 @@
     <tr>
         <th>Id</th>
         <th>Name</th>
+        <th>Floor</th>
         <th>Room</th>
         <th>Building</th>
         <th>Floorplan</th>
@@ -31,6 +32,9 @@
             </td>
             <td>
                 {{$tour->name}}
+            </td>
+            <td>
+                {{$tour->floor}}
             </td>
             <td>
                 {{$tour->room->name}}
@@ -59,4 +63,7 @@
         </tr>
     @endforeach
 </table>
+<div>
+    {{ $tours->links() }}
+</div>
 @endsection

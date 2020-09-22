@@ -46,6 +46,21 @@
             <div class="form-group">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
+                        <strong>Tour:</strong>
+                        <input
+                            type="text"
+                            name="tour"
+                            value="{{$floorplan->tour}}"
+                            class="form-control"
+                            placeholder="Tour">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
                         <strong>Room:</strong>
                         <select name="room_id" class="form-control">
                             <option value="">--Select--</option>

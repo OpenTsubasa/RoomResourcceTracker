@@ -17,6 +17,7 @@
     <tr>
         <th>Id</th>
         <th>Name</th>
+        <th>Tour</th>
         <th>Room</th>
         <th>Building</th>
         <th>Created At</th>
@@ -30,6 +31,9 @@
             </td>
             <td>
                 {{$floorplan->name}}
+            </td>
+            <td>
+                {{$floorplan->tour}}
             </td>
             <td>
                 {{$floorplan->room->name}}

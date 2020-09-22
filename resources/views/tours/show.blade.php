@@ -28,6 +28,12 @@
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
+            <strong>Floor:</strong>
+            {{$tour->floor}}
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
             <strong>Room:</strong>
             {{$tour->room->name}}
         </div>
