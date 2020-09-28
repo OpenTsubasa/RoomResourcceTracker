@@ -23,8 +23,8 @@
                     @foreach ($floorplans as $floorplan)
                     <tr>
                         <td>{{$floorplan->id}}</td>
-                        <td><a target="_blank" href="{{$floorplan->name}}">{{$floorplan->name}}</a></td>
-                        <td><a target="_blank" href="{{$floorplan->tour}}">{{$floorplan->tour}}</a></td>
+                        <td><a target="_blank" href="{{$floorplan->name}}"><img src="http://vrlab.ru.ac.bd/rrt/public/fp.png" width="30" height="25"></a></td>
+                        <td><a target="_blank" href="{{$floorplan->tour}}"><img src="http://vrlab.ru.ac.bd/rrt/public/tour.png" width="30" height="30"></a></td>
                         <td>{{$floorplan->room->name}}</td>
                         <td>{{$floorplan->room->department->name}}</td>
                         <td>{{$floorplan->room->building->name}}</td>
